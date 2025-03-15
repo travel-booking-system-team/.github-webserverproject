@@ -15,7 +15,7 @@
 The system follows a **client-server architecture
 
 **📌 Architecture Diagram:**  
-![Architecture Diagram](https://github.com/dptoala/travel-booking-system/blob/main/database/architecture.png)  
+![Architecture Diagram](https://github.com/travel-booking-system-team/.github-webserverproject/edit/main/database/architecture.png)  
 
 ---
 
