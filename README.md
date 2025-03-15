@@ -15,7 +15,7 @@
 The system follows a **client-server architecture
 
 **📌 Architecture Diagram:**  
-![Architecture Diagram](https://github.com/travel-booking-system-team/.github-webserverproject/edit/main/database/architecture.png)  
+![Architecture Diagram](https://github.com/travel-booking-system-team/.github-webserverproject/blob/main/database/architecture.png)  
 
 ---
 
@@ -31,8 +31,10 @@ The system follows a **client-server architecture
 The database schema is designed to store information about users, flights, and reservations.  
 
 **📌 Database Schema Diagram:**  
-![Database Schema](https://github.com/dptoala/travel-booking-system/blob/main/database/db_diagram.png)
+![Database Schema](https://github.com/travel-booking-system-team/.github-webserverproject/blob/main/database/db_diagram.png)
 
+**📌 Database Script:**  
+![Database Schema](https://github.com/travel-booking-system-team/.github-webserverproject/blob/main/database/db_backup.sql)
 
 ---
 
