@@ -10,7 +10,52 @@
 - Zenhayevsky Carolina Solorzano Acevedo  
 - Diana Paola Toala Lopez
 
-  
+
+  ## ✨ Features  
+
+✅ **User Registration/Login** 🔐  
+   - Secure login using email and password.  
+   - Users can reset their password via email verification.  
+
+✅ **User Profile Management** 👤  
+   - Users can update personal details.  
+   - View booking history.  
+
+✅ **Browse Destinations** 🌍  
+   - List of available destinations with images, descriptions, and prices.  
+   - Filters for easy searching.  
+
+✅ **Booking System** 📅  
+   - Users can select destinations, choose travel dates, and book a trip.  
+
+✅ **Cancel a Booking** ❌  
+   - Users can cancel their bookings via their account.  
+   - Receive an email confirmation.  
+
+✅ **Reschedule a Booking** 🔄  
+   - Modify travel dates (subject to availability).  
+   - Receive an updated confirmation email.  
+
+✅ **Admin Panel** 🛠  
+   - Admins can manage bookings, users, and destinations.  
+
+✅ **Payment Integration (Optional)** 💳  
+   - Secure payment processing using Stripe or PayPal.  
+
+✅ **Email Notifications** 📧  
+   - Automatic emails for booking confirmations, cancellations, and reschedules.  
+
+✅ **Reviews & Ratings** ⭐  
+   - Users can leave feedback and rate destinations.  
+   - Admins can moderate reviews.  
+
+✅ **Wishlist/Favorites** ❤️  
+   - Users can save destinations for future bookings.  
+
+✅ **Basic Support System** 💬  
+   - Contact form or chat system for user inquiries.
+
+     
 ## 🏗️ System Architecture  
 The system follows a **client-server architecture
 
