@@ -114,5 +114,6 @@ Before running the project, make sure you have:
 ├── register.php  # User registration page
 ├── dashboard.php # User dashboard
 ├── README.md     # Documentation file
+├── /architecture # Architecture Diagram
 └── /database     # Database file
 
