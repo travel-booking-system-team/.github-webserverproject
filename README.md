@@ -1,73 +1,24 @@
 # .github-webserverproject
 
- 🛫 Travel Booking System  
+ # 🏨 Travel Booking System
 
-## 📖 Description  
-**Travel Booking System** is a web application that allows users to register, log in, and manage their flight reservations for domestic and international travel easily and efficiently.  It includes a user authentication system, booking management, and a database connection to store user and travel data.
+A web-based travel booking platform for users to search, book, and manage trips. Built using MySQL, PHP, JavaScript, and Bootstrap.
 
+## 🌟 Features
+- 🛫 Flight & Hotel Booking
+- 💳 Secure Payments
+- 📅 Reservation Management
+- 👤 User Accounts & Profiles
 
-## 🏗️ System Architecture  
-The system follows a **client-server architecture
+## 🚀 Tech Stack
+- **Frontend:** HTML, CSS, Bootstrap, JavaScript
+- **Backend:** PHP, Node.js
+- **Database:** MySQL/MariaDB
+- **Version Control:** Git & GitHub
 
-
-**📌 Architecture Diagram:**  
-![Architecture Diagram](https://github.com/dptoala/WebTest2025/blob/main/database/architecture.png)  
-
----
-
-## 🛠️ Technologies Used  
-- **Server-side language:** PHP  
-- **Database:** MySQL  
-- **Front-end:** HTML, CSS, JavaScript  
-- **Version control:** Git 
-
----
-
-## 🗄️ Database Schema  
-The database schema is designed to store information about users, flights, and reservations.  
-
-**📌 Database Schema Diagram:**  
-![Database Schema](https://github.com/dptoala/WebTest2025/blob/main/database/db_diagram.png)
-
-
----
-
-## 📌 Prerequisites  
-Before running the project, make sure you have:  
-- Apache server with PHP (`XAMPP` or `WAMP`)  
-- MySQL  
-- Git  
-
-
----
-
-
-## ⚙️ Installation & Setup  
-1. **Clone the repository**  
-   ```sh
-   git clone https://github.com/your-username/travel-booking-system.git
-
-
----
-
-
-## 📂 Project Structure  
-```bash
-/travel-booking-system
-├── /css         # Stylesheets
-├── /php         # Backend scripts 
-├── /images      # Project images
-├── /includes    # Footer and Header
-├── index.php    # Home page
-├── login.php    # User login page
-├── register.php # User registration page
-├── dashboard.php # User dashboard
-├── README.md  # Documentation file
-├── db_diagram.png  # Database diagram
-└── database.sql  # Database file
-
-
----
+## 📥 Installation
+1. Clone the repository:
+ 
 
 
 ## 👨‍💻 Authors
