@@ -1,5 +1,3 @@
-<?php include '../includes/sessions.php'; ?>
-<?php include '../includes/header-member.php'; ?>
 <link href="../css/main.css" rel="stylesheet">  <!-- Asegura que apunte correctamente al CSS -->
 
 <div class="register-container">
@@ -27,7 +25,7 @@
         </div>
 
         <div class="form-buttons">
-            <button type="button" class="cancel-button">Cancel</button>
+            <button type="button" class="cancel-button" onclick="closeModal()">Cancel</button>
             <button type="submit" class="submit-button">Sign Up</button>
         </div>
     </form>
@@ -36,5 +34,3 @@
         Already have an account? <a href="login.php">Log in here</a>
     </p>
 </div>
-
-<?php include '../includes/footer.php'; ?>

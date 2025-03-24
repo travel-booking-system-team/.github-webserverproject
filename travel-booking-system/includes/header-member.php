@@ -34,34 +34,54 @@ if (!isset($logged_in)) {
         <!-- Navegação direita -->
         <nav class="header-nav-right">
           <ul>
-            <li><a href="<?= $baseLink ?>/components/register.php">Sign Up</a></li>
-            <li><a href="#" onclick="openModal()">Log In</a></li>
+            <li><a href="#" onclick="openModal('SingUp')">Sign Up</a></li>
+            <li><a href="#" onclick="openModal('LogIn')">Log In</a></li>
           </ul>
         </nav>
       </div>
     </div>
 
-    <!-- Modal -->
-    <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.6); justify-content:center; align-items:center;">
+    <!-- Modal Log in -->
+    <div id="modalLogIn" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.6); justify-content:center; align-items:center;">
       <div>
         <?php
         $loginPath = __DIR__ . '/../components/login.php';
         if (file_exists($loginPath)) {
             include $loginPath;
         } else {
-            echo "<p>Erro: Formulário de login não encontrado.</p>";
+            echo "<p>Error: form not found.</p>";
+        }
+        ?>
+      </div>
+    </div>
+
+    <!-- Modal sing Up -->
+    <div id="modalSingUp" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.6); justify-content:center; align-items:center;">
+      <div>
+        <?php
+        $loginPath = __DIR__ . '/../components/singUp.php';
+        if (file_exists($loginPath)) {
+            include $loginPath;
+        } else {
+            echo "<p>Error: form not found.</p>";
         }
         ?>
       </div>
     </div>
 
     <script>
-      function openModal() {
-        document.getElementById('modal').style.display = 'flex';
+      function openModal(typeModal) {
+        if (typeModal == "LogIn"){
+          document.getElementById('modalLogIn').style.display = 'flex';
+
+        }else if (typeModal == "SingUp"){
+          document.getElementById('modalSingUp').style.display = 'flex';
+        }
       }
 
       function closeModal() {
-        document.getElementById('modal').style.display = 'none';
+        document.getElementById('modalSingUp').style.display = 'none';
+        document.getElementById('modalLogIn').style.display = 'none';
       }
 
       function login(){
