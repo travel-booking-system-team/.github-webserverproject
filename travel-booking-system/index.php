@@ -2,7 +2,7 @@
   include 'includes/sessions.php';
   // Include header-member in the includes/ directory
 ?>
-<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="css/main.css">
 
 <?php include 'includes/header-member.php'; ?>
 

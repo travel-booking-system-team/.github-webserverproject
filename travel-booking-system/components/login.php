@@ -1,5 +1,8 @@
 <?php
-include '../includes/sessions.php'; // sessions
+// Simulação de verificação de login
+$logged_in = false; // Aqui você definiria a verificação real de login
+$email = "usuario@example.com"; // Email de exemplo
+$password = "senha123"; // Senha de exemplo
 
 // Si el usuario ya está logueado, redirigirlo a su cuenta
 if ($logged_in) {
@@ -12,20 +15,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user_email = $_POST['email']; // Capturar email del formulario
     $user_password = $_POST['password']; // Capturar password del formulario
 
-    // Verificar credenciales (esto se reemplazará con la base de datos en el futuro)
+    // Verificar as credenciais
     if ($user_email == $email && $user_password == $password) {
-        login(); // Iniciar sesión
-        header('Location: account.php'); // Redirigir al dashboard
+        // Função de login (exemplo)
+        login(); // Substitua esta função pela lógica real de login
+
+        // Redirecionar para o dashboard
+        header('Location: pages/dashboard.php'); 
         exit;
     } else {
+        // Mensagem de erro
         $error_message = "Invalid email or password.";
     }
 }
 
-include '../includes/header-member.php'; // includes header
-
 ?>
-<link rel="stylesheet" href="../css/main.css">
 
 <div class="login-container">
     <h2>Login</h2>
@@ -34,7 +38,7 @@ include '../includes/header-member.php'; // includes header
         <p class="error"><?= $error_message; ?></p>
     <?php endif; ?>
 
-    <form action="pages/login.php" method="POST">
+    <form action="" method="POST">
         <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
@@ -46,14 +50,13 @@ include '../includes/header-member.php'; // includes header
         </div>
 
         <div class="form-buttons">
-            <button type="button" class="cancel-button">Cancel</button>
+            <button type="button" class="cancel-button" onclick="closeModal()">Cancel</button>
             <button type="submit" class="submit-button">Login</button>
         </div>
     </form>
-        <!-- Link to register page -->
-        <p class="register-link">
+    
+    <!-- Link to register page -->
+    <p class="register-link">
         Don't have an account? <a href="register.php">Sign up here</a>
     </p>
 </div>
-
-<?php include '../includes/footer.php'; // Incluir el footer ?>
