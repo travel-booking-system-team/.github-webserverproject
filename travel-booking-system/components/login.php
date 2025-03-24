@@ -57,6 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     <!-- Link to register page -->
     <p class="register-link">
-        Don't have an account? <a href="register.php">Sign up here</a>
+        Don't have an account? <a onclick="goToModal('modalSingUp')" style="cursor: pointer;">Sign up here</a>
     </p>
 </div>

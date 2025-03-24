@@ -89,6 +89,18 @@ if (!isset($logged_in)) {
         header('Location: index.php');
         exit;
       }
+
+      function goToModal(type) {
+        if (type == "modalLogIn"){
+          document.getElementById('modalLogIn').style.display = 'flex';
+          document.getElementById('modalSingUp').style.display = 'none';
+
+        }else if (type == "modalSingUp"){
+          document.getElementById('modalSingUp').style.display = 'flex';
+          document.getElementById('modalLogIn').style.display = 'none';
+        }
+      }
+
     </script>
   </body>
 </html>

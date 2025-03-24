@@ -31,6 +31,6 @@
     </form>
 
     <p class="login-link">
-        Already have an account? <a href="login.php">Log in here</a>
+        Already have an account? <a onclick="goToModal('modalLogIn')" style="cursor: pointer;">Log in here</a>
     </p>
 </div>
