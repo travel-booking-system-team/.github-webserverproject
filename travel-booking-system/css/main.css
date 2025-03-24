@@ -100,7 +100,7 @@ input[type='submit']:hover {
 }
 
 
-.header-nav {
+.header-nav-right {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -109,8 +109,17 @@ input[type='submit']:hover {
   border-radius: 5px;
 }
 
+.header-nav-left {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);  
+  padding: 10px 15px;
+  border-radius: 5px;
+}
 
-.header-nav ul {
+
+.header-nav-right ul , .header-nav-left ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -118,11 +127,12 @@ input[type='submit']:hover {
   gap: 15px;
 }
 
-.header-nav ul li {
+.header-nav-right  ul li, .header-nav-left ul li {
   display: inline-block;
 }
 
-.header-nav ul li a {
+.header-nav-right ul li a, 
+.header-nav-left ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -130,7 +140,7 @@ input[type='submit']:hover {
   transition: background 0.3s;
 }
 
-.header-nav ul li a:hover {
+.header-nav-right ul li a:hover, .header-nav-left ul li a:hover {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
 }

@@ -15,15 +15,20 @@
         <!-- Imagen del header -->
         <div class="header-image">
           <img src="images/header_fly.png" alt="Travel Header">
-          
-          <!-- Navegación dentro de la imagen -->
-          <nav class="header-nav">
+
+          <!-- Nav rigleft login -->
+          <nav class="header-nav-left">
             <ul>
               <li><a href="index.php">Home</a></li>
-              <li><a href="browse.php">Destinations</a></li>
-              <li><a href="dashboard.php">Dashboard</a></li>
               <li><a href="aboutus.php">About US</a></li>
               <li><a href="contact.php">Contact</a></li>
+            </ul>
+          </nav>
+          
+          <!-- Nav right login -->
+          <nav class="header-nav-right">
+            <ul>
+              <li><a href="contact.php">Sing Up</a></li>
               <li>
                 <?= $logged_in 
                     ? '<a href="logout.php">Log Out</a>' 
