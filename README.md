@@ -104,16 +104,27 @@ Before running the project, make sure you have:
 
 ## 📂 Project Structure  
 ```bash
+/architecture # Architecture Diagram
+/database     # Database file
 /travel-booking-system
+├── /components   # components like forms
+|     |--login.php
+|     |--passanger.php
+|     |--singUp.php
 ├── /css          # Stylesheets
-├── /php          # Backend scripts 
+|     |--main.css
 ├── /images       # Project images
-├── /includes     # Footer and Header
+|     |--header_fly.png
+├── /includes    
+|     |--footer.php
+|     |--header-member.php
+|     |--sessions.php
+├── /pages   #pages of the project
+|     |--aboutus.php
+|     |--contact.php
+|     |--dashboard.php
+|     |--account.php
+|     |--myFlights.php
 ├── index.php     # Home page
-├── login.php     # User login page
-├── register.php  # User registration page
-├── dashboard.php # User dashboard
 ├── README.md     # Documentation file
-├── /architecture # Architecture Diagram
-└── /database     # Database file
 
