@@ -1,5 +1,6 @@
-<?php include 'includes/sessions.php'; ?>
-<?php include 'includes/header-member.php'; ?>
+<?php include '../includes/sessions.php'; ?>
+<?php include '../includes/header-member.php'; ?>
+<link href="../css/main.css" rel="stylesheet">  <!-- Asegura que apunte correctamente al CSS -->
 
 <div class="register-container">
     <h2>Sign Up</h2>
@@ -36,4 +37,4 @@
     </p>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
