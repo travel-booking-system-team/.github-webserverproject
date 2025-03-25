@@ -22,7 +22,7 @@ if (!isset($logged_in)) {
       <div class="header-image">
         <img src="<?= $imagePath ?>" alt="Travel Header">
 
-        <!-- Navegação esquerda -->
+        <!-- left nav -->
         <nav class="header-nav-left">
           <ul>
             <li><a href="<?= $baseLink ?>/index.php">Home</a></li>
@@ -31,7 +31,7 @@ if (!isset($logged_in)) {
           </ul>
         </nav>
         
-        <!-- Navegação direita -->
+        <!-- right nav -->
         <nav class="header-nav-right">
           <ul>
             <li><a href="#" onclick="openModal('SingUp')">Sign Up</a></li>
@@ -55,7 +55,7 @@ if (!isset($logged_in)) {
       </div>
     </div>
 
-    <!-- Modal sing Up -->
+    <!-- Modal sing Up to do also a component -->
     <div id="modalSingUp" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.6); justify-content:center; align-items:center;">
       <div>
         <?php

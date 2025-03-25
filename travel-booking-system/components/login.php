@@ -1,30 +1,25 @@
 <?php
-// Simulação de verificação de login
-$logged_in = false; // Aqui você definiria a verificação real de login
-$email = "usuario@example.com"; // Email de exemplo
-$password = "senha123"; // Senha de exemplo
+// login example
+$logged_in = false; // login verification
+$email = "usuario@example.com"; 
+$password = "senha123"; 
 
-// Si el usuario ya está logueado, redirigirlo a su cuenta
+//if logged, it goes to the account page
 if ($logged_in) {
     header('Location: account.php');
     exit;
 }
 
-// Manejar el formulario de login
+// login form
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $user_email = $_POST['email']; // Capturar email del formulario
-    $user_password = $_POST['password']; // Capturar password del formulario
+    $user_email = $_POST['email'];
+    $user_password = $_POST['password']; 
 
-    // Verificar as credenciais
     if ($user_email == $email && $user_password == $password) {
-        // Função de login (exemplo)
-        login(); // Substitua esta função pela lógica real de login
-
-        // Redirecionar para o dashboard
+        login(); 
         header('Location: pages/dashboard.php'); 
         exit;
     } else {
-        // Mensagem de erro
         $error_message = "Invalid email or password.";
     }
 }
