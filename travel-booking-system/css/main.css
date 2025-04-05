@@ -337,3 +337,52 @@ input[type='submit']:hover {
   margin-bottom: 10px;
 }
 
+/* ========== carousel Flight Result Styles ========== */
+.flight-carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+}
+
+.flight-carousel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.flight-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-nav {
+  background-color: #eab308;
+  border: none;
+  color: #1a2745;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-nav:hover {
+  background-color: #cfa000;
+}
+
+.flight-option {
+  flex: 0 0 auto;
+  width: 250px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
