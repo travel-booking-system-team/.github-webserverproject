@@ -1,17 +1,12 @@
 </section> 
 
 <footer class="footer-container">
-    <div class="footer-content">
-        <div class="social-icons">
+  <div class="footer-content">
+    <div class="social-icons">
             <img src="images/facebook.png" alt="Facebook">
             <img src="images/instagram.png" alt="Instagram">
             <img src="images/linkedin.png" alt="LinkedIn">
         </div>
-  <div class="footer-content">
-    <div>
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
     </div>
         <div class="footer-text">
     <div class="footer-text">
