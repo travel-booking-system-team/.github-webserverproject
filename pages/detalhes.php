@@ -1,5 +1,31 @@
 <?php
-// Simulando a obtenção do voo com base no ID
+
+// Include necessary files
+include '../includes/sessions.php';
+include '../includes/functions.php';
+include '../includes/db.php';
+
+// Check if the user is logged in
+require_login($logged_in);
+
+$errors = [];
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $flight_id = $_POST['flight_id'];
+    $user_id = $id;
+
+    // Insert reservation
+    $sql = "INSERT INTO reservations (user_id, flight_id, reservation_date) VALUES (:user_id, :flight_id, NOW())";
+    
+    try {
+        pdo($pdo, $sql, ['user_id' => $user_id, 'flight_id' => $flight_id]);
+        $success_message = 'Your flight has been successfully purchased!';
+    } catch (PDOException $e) {
+        $errors['message'] = 'Error making reservation: ' . $e->getMessage();
+    }
+}
+
+// Flight data (example/mock)
 $viagens = [
     1 => [
         'flight_number' => 'AA101',
@@ -48,48 +74,99 @@ $viagens = [
     ]
 ];
 
-// Obter o ID do voo a partir da URL
+// Get flight ID from URL
 $flight_id = $_GET['flight_id'] ?? null;
 
 if ($flight_id && isset($viagens[$flight_id])) {
-    $voo = $viagens[$flight_id];
+    $flight = $viagens[$flight_id];
 } else {
-    // Caso o ID do voo não seja válido, podemos redirecionar ou exibir um erro.
-    echo "flight not found";
+    echo "Flight not found";
     exit;
 }
 
-include '../includes/sessions.php'; 
-require_login($logged_in);
 include '../includes/header-member.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['buy_ticket'])) {
+    $user_id = $_SESSION['user_id'] ?? null;
+    $flight_id = $_POST['flight_id'];
+
+    if ($user_id && $flight_id) {
+        $now = date('Y-m-d H:i:s');
+        $sql = "INSERT INTO reservations (user_id, flight_id, reservation_date, status, payment_status, created_at, updated_at)
+                VALUES (:user_id, :flight_id, :reservation_date, 'pending', 'unpaid', :created_at, :updated_at)";
+        
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            ':user_id' => $user_id,
+            ':flight_id' => $flight_id,
+            ':reservation_date' => $now,
+            ':created_at' => $now,
+            ':updated_at' => $now,
+        ]);
+
+        echo "<script>alert('Purchase completed successfully!'); window.location.href='dashboard.php';</script>";
+        exit;
+    }
+}
 ?>
 
 <link rel="stylesheet" href="../css/main.css">
 
 <div class="register-container">
-    <h2>Detalhes do Voo</h2>
+    <h2>Flight Details</h2>
 
     <div class="flight-card_d">
         <div class="card_d-header">
-            <h3 class="flight-number"><?php echo $voo['flight_number']; ?></h3>
-            <p class="price">$<?php echo number_format($voo['price'], 2, '.', ','); ?></p>
+            <h3 class="flight-number"><?= $flight['flight_number']; ?></h3>
+            <p class="price">$<?= number_format($flight['price'], 2, '.', ','); ?></p>
         </div>
         <div class="card_d-body">
             <div class="departure">
                 <h4>Departure</h4>
-                <p><strong>From:</strong> <?php echo $voo['departure_airport']; ?></p>
-                <p><strong>Date:</strong> <?php echo date('Y-m-d H:i', strtotime($voo['departure_date'])); ?></p>
+                <p><strong>From:</strong> <?= $flight['departure_airport']; ?></p>
+                <p><strong>Date:</strong> <?= date('Y-m-d H:i', strtotime($flight['departure_date'])); ?></p>
             </div>
             <div class="arrival_d">
                 <h4>Arrival</h4>
-                <p><strong>To:</strong> <?php echo $voo['arrival_airport']; ?></p>
-                <p><strong>Date:</strong> <?php echo date('Y-m-d H:i', strtotime($voo['arrival_date'])); ?></p>
+                <p><strong>To:</strong> <?= $flight['arrival_airport']; ?></p>
+                <p><strong>Date:</strong> <?= date('Y-m-d H:i', strtotime($flight['arrival_date'])); ?></p>
             </div>
         </div>
         <div class="card_d-footer">
-            <p><strong>Available Seats:</strong> <?php echo $voo['available_seats']; ?></p>
+            <p><strong>Available Seats:</strong> <?= $flight['available_seats']; ?></p>
         </div>
     </div>
 </div>
 
+<div class="register-container">
+    <?php if (isset($flight) && isset($_SESSION['user_id'])): ?>
+        <form method="POST" class="buy-form">
+            <h3>Payment Information</h3>
+            
+            <input type="hidden" name="flight_id" value="<?= $flight_id ?>">
+
+            <div class="form-group">
+                <label for="card_name">Cardholder Name:</label>
+                <input type="text" id="card_name" name="card_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="card_number">Card Number:</label>
+                <input type="text" id="card_number" name="card_number" maxlength="16" required>
+            </div>
+
+            <div class="form-group">
+                <label for="expiry_date">Expiry Date (MM/YY):</label>
+                <input type="text" id="expiry_date" name="expiry_date" maxlength="5" placeholder="MM/YY" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" maxlength="4" required>
+            </div>
+
+            <button type="submit" name="buy_ticket">Purchase Ticket</button>
+        </form>
+    <?php endif; ?>
+</div>
 <?php include '../includes/footer.php'; ?>

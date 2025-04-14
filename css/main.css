@@ -421,7 +421,7 @@ h1 {
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
-  width: 280px;
+  width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
   cursor: pointer;
@@ -527,9 +527,30 @@ h1 {
   }
 }
 
+.buy-form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.buy-form button {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-form button:hover {
+  background-color: #005f73;
+}
+
+
 ///// search container
 
-.search-container {
+.search-container{
   background-color: #001f3d !important;
   width: 100%;
   padding: 20px 0;

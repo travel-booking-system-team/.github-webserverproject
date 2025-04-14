@@ -114,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && count($flights) === 0) {
 <?php
 // Exibe os resultados das viagens, caso tenham sido encontrados
 if ($_SERVER["REQUEST_METHOD"] == "POST" && count($flights) > 0) {
-    echo '<b><p><h3>Flight Results</h3></b></p>';
+    echo '<h3 style="margin-top: 2%;"><b>Flight Results</b></h3>';
 } else if ($_SERVER["REQUEST_METHOD"] == "POST" && $no_flights_found) {
     // Exibe a mensagem de "No flights found" somente após a pesquisa
     echo '<p>No flights found matching your criteria.</p>';
