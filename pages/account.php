@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="../css/main.css">
 
 <div class="register-container">
-    <h2>My account</h2>
+    <h2>My cool account</h2>
 
     
 </div>
