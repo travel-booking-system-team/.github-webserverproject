@@ -8,5 +8,8 @@ function pdo ( PDO $pdo, string $sql, array $arguments = null ) {
   $statement->execute( $arguments );  // Execute statement
   return $statement;                  // Return PDOStatement object
 }
-
+function redirect_to($url = '/index.php') {
+  header("Location: $url");
+  exit;
+}
 ?>

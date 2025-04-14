@@ -33,10 +33,7 @@
     session_destroy();
   }
 
-  // Write a function `require_login` that accepts a parameter `logged_in`
-  // that indicates whether or not the user is logged in. If they are not,
-  // redirect the user to the login page and stop script execution.
-  //
+
   function require_login ( $logged_in ) {
     if ( $logged_in == false ) {
       header( 'Location: login.php' );
