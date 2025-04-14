@@ -1,65 +1,168 @@
-<?php include '../includes/sessions.php'; ?>
-<?php include '../includes/header-member.php'; ?>
+<?php include '../includes/sessions.php';?>
+
 <link rel="stylesheet" href="../css/main.css">
 
-<div class="register-container">
-<h2>About Us</h2>
-  <p><strong>FlyBridge Travel</strong> is a student-run airline booking project designed to make travel planning fast, intuitive, and inspiring. We believe travel should be accessible, simple, and exciting for everyone.</p>
+<?php include '../includes/header-member.php';?>
 
-  <h3>Our Vision</h3>
-  <p>To become the most user-friendly and affordable online travel solution for discovering global destinations.</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="mb-4 text-center" >About Us</h2>
+            <div class="card-about">
+                <div class="card-body">
+                    <h3>Welcome to YouFly</h3>
+                    <p class="lead">Your trusted partner in creating unforgettable travel experiences since 2025.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h4>Our Mission</h4>
+                            <p>To provide exceptional travel services that exceed our customers' expectations by offering seamless booking experiences, competitive prices, and outstanding customer support.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Our Vision</h4>
+                            <p>To become the world's most trusted and innovative travel booking platform, connecting people to their dream destinations.</p>
+                        </div>
+                    </div>
 
-  <h3>Our Mission</h3>
-  <p>We strive to simplify travel by connecting travelers with the best flight deals, flexible search tools, and a seamless booking experience.</p>
+                    <div class="mt-4">
+                        <h4>Popular Destinations</h4>
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="images/destinations/new-york.jpeg" class="card-img-top" alt="New York">
+                                    <div class="card-body">
+                                        <h5>New York</h5>
+                                        <p>Experience the vibrant culture and iconic skyline of the Big Apple.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="images/destinations/paris.jpeg" class="card-img-top" alt="Paris">
+                                    <div class="card-body">
+                                        <h5>Paris</h5>
+                                        <p>Discover the romance and beauty of the City of Light.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="images/destinations/london.jpeg" class="card-img-top" alt="London">
+                                    <div class="card-body">
+                                        <h5>London</h5>
+                                        <p>Explore the rich history and modern charm of England's capital.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-  <h3>Our Values</h3>
-  <ul style="text-align:left; padding-left: 2em;">
-    <li><strong>Innovation:</strong> We embrace technology to improve the way people plan and book trips.</li>
-    <li><strong>Transparency:</strong> No hidden fees or misleading prices.</li>
-    <li><strong>Trust:</strong> We prioritize secure and reliable transactions.</li>
-    <li><strong>Teamwork:</strong> We collaborate to build great digital experiences.</li>
-  </ul>
+                    <div class="mt-4">
+                        <h4>Why Choose Us?</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card mb-3">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-dollar-sign fa-3x mb-3 text-primary"></i>
+                                        <h5>Best Prices</h5>
+                                        <p>We guarantee competitive prices and great deals on flights worldwide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card mb-3">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-headset fa-3x mb-3 text-primary"></i>
+                                        <h5>24/7 Support</h5>
+                                        <p>Our customer service team is available round the clock to assist you.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card mb-3">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-shield-alt fa-3x mb-3 text-primary"></i>
+                                        <h5>Secure Booking</h5>
+                                        <p>Your payments and personal information are protected with advanced security.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h4 class="text-center mb-4">Our Team</h4>
+                        <div class="row">
+                            <div class="col-md-3 mb-4">
+                                <div class="card team-member">
+                                    <img src="images/team/jess.jpeg" class="card-img-top" alt="CEO">
+                                    <div class="card-body text-center">
+                                        <h5>Jessica N Hattori</h5>
+                                        <p class="text-muted">CEO & Founder</p>
+                                        <p>20+ years of experience in travel industry</p>
+                                        <div class="social-links">
+                                            <a href="www.linkedin.com" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+                                            <a href="www.x.com" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-4">
+                                <div class="card team-member">
+                                    <img src="images/team/diana.jpeg" class="card-img-top" alt="Operations Director">
+                                    <div class="card-body text-center">
+                                        <h5>Diana Toala</h5>
+                                        <p class="text-muted">Operations Director</p>
+                                        <p>Expert in travel operations and customer service</p>
+                                        <div class="social-links">
+                                            <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+                                            <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-4">
+                                <div class="card team-member">
+                                    <img src="images/team/zenha.jpeg" class="card-img-top" alt="Tech Lead">
+                                    <div class="card-body text-center">
+                                        <h5>Zenha Carolina</h5>
+                                        <p class="text-muted">Tech Lead</p>
+                                        <p>Leading our digital transformation initiatives</p>
+                                        <div class="social-links">
+                                            <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+                                            <a href="#" class="text-dark me-2"><i class="fab fa-github"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-4">
+                                <div class="card team-member">
+                                    <img src="images/team/lucas.jpeg" class="card-img-top" alt="Customer Service Manager">
+                                    <div class="card-body text-center">
+                                        <h5>Lucas Omeira</h5>
+                                        <p class="text-muted">Customer Service Manager</p>
+                                        <p>Dedicated to providing exceptional support</p>
+                                        <div class="social-links">
+                                            <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+                                            <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!-- Team Members Carousel -->
-<div class="register-container">
-  <h2>Our Team</h2>
-  <div class="team-wrapper">
-  <div class="team-member">
-    <img src="../images/jess.jpeg" alt="Jessica Narita">
-    <h4>Jessica Narita</h4>
-    <p>Web Designer</p>
-  </div>
-  <div class="team-member">
-    <img src="../images/diana.jpeg" alt="Diana Toala">
-    <h4>Diana Toala</h4>
-    <p>CEO</p>
-  </div>
-  <div class="team-member">
-    <img src="../images/zenha.jpeg" alt="Caroline Zenha">
-    <h4>Caroline Zenha</h4>
-    <p>Marketing</p>
-  </div>
-  <div class="team-member">
-    <img src="../images/lucas.jpeg" alt="Lucas Otaviano">
-    <h4>Lucas Otaviano</h4>
-    <p>Sales</p>
-  </div>
-</div>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
-</div>
 
 <?php include '../includes/footer.php'; ?>
 
-<!-- Carousel Script -->
-<script>
-function scrollTeamCarousel(direction) {
-  const carousel = document.getElementById('teamCarousel');
-  const scrollAmount = 200;
-  carousel.scrollBy({
-    left: direction * scrollAmount,
-    behavior: 'smooth'
-  });
-}
-</script>
+

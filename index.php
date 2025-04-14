@@ -50,8 +50,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && count($flights) === 0) {
 }
 ?>
 
-<link rel="stylesheet" href="css/main.css">
-
 <?php include 'includes/header-member.php'; ?>
 
 <div class="search-container">
