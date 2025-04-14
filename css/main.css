@@ -386,6 +386,354 @@ input[type='submit']:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
+.user-name {
+  color: #eab308;
+  font-weight: bold;
+  margin-left: 58%
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container_trips {
+  text-align: center;
+  margin-top:5%;
+  margin-bottom:5%;
+}
+
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.card p strong {
+  color: #333;
+}
+///////////////////////////////
+
+/* Estilos do card de voo */
+.flight-card_d {
+  width: 350px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.flight-card_d:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card_d-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.flight-number {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.card_d-body {
+  margin-bottom: 15px;
+}
+
+.departure, .arrival {
+  margin-bottom: 10px;
+}
+
+.departure h4 {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 16px;
+  color: #777;
+  margin: 4px 0;
+}
+
+.card_d-footer {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .flight-card_d {
+      width: 90%;
+  }
+}
+
+.buy-form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.buy-form button {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-form button:hover {
+  background-color: #005f73;
+}
+
+
+///// search container
+
+.search-container{
+  background-color: #001f3d !important;
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 5%;
+  margin-top: 20px;
+}
+
+.search {
+  background-color: #001f3d; 
+  max-width: 70%; /* Limita a largura para o mesmo tamanho do cabeçalho */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; /* Fundo branco para o conteúdo do formulário */
+  border-radius: 10px;
+  background-color: #001f3d !important;
+}
+
+.faq-section {
+  margin-top:2%;
+}
+
+.search-container .search h2 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.search-container .search label {
+  display: flex;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.search-container .search input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-container .search button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffb81c;
+  color: #fff;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-container .search button:hover {
+  background-color: #e89d14;
+}
+
+.search-container .search form {
+  display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+}
+
+.search-container .search .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-container .search label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-right: 5px;
+        white-space: nowrap;
+}
+
+.search-container .search input, select {
+  padding: 5px;
+  min-width: 120px;
+}
+
+.search-container .search button {
+  padding: 5px 10px;
+  margin-top:10px
+}
+  
+  .flights-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 10px 0;
+}
+
+.flight-card_d {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.flight-card_d:hover {
+    transform: scale(1.02);
+}
+
+.card_d-header,
+.card_d-body,
+.card_d-footer {
+    margin-bottom: 10px;
+}
+
+.card_d-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+//CARDSD DETEILS
+/* Container dos cards */
+.register-container_dash {
+  margin: 3% auto;
+  width: 90%;
+}
+
+.flights-grid_hash {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card_hash {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 280px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card_hash:hover {
+  transform: translateY(-5px);
+}
+
+.card-content_hash img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.card-title_hash {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.card-content_hash p {
+  margin: 5px 0;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+  .card_hash {
+      width: 100%;
+  }
+}
+
+.flight-card {
+  background-color: #001f3d !important;
+  width: 20%;
+  padding: 20px 0;
+  margin-top: 5%;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.flight-number{
+  color: #008CBA;
+}
 
 /*FAQ*/
     .faq {
@@ -418,4 +766,3 @@ input[type='submit']:hover {
       border-left: 3px solid #007BFF;
       background-color: #f9f9f9;
     }
- 
