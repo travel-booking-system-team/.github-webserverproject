@@ -32,8 +32,6 @@
 
     session_destroy();
   }
-
-
   function require_login ( $logged_in ) {
     if ( $logged_in == false ) {
       header( 'Location: login.php' );

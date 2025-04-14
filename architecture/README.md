@@ -79,7 +79,7 @@ The database schema is designed to store information about users, flights, and r
 ![Database Schema](https://github.com/travel-booking-system-team/.github-webserverproject/blob/main/database/db_diagram.png)
 
 **📌 Database Script:**  
-![Database Script](https://github.com/travel-booking-system-team/.github-webserverproject/blob/main/database/db_backup.sql)
+![Database Script](https://github.com/travel-booking-system-team/.github-webserverproject/blob/main/database/travel_bookingdb.sql)
 
 ---
 
@@ -104,27 +104,51 @@ Before running the project, make sure you have:
 
 ## 📂 Project Structure  
 ```bash
-/architecture # Architecture Diagram
-/database     # Database file
-/travel-booking-system
-├── /components   # components like forms
-|     |--login.php
-|     |--passanger.php
-|     |--singUp.php
-├── /css          # Stylesheets
-|     |--main.css
-├── /images       # Project images
-|     |--header_fly.png
-├── /includes    
-|     |--footer.php
-|     |--header-member.php
-|     |--sessions.php
-├── /pages   #pages of the project
-|     |--aboutus.php
-|     |--contact.php
-|     |--dashboard.php
-|     |--account.php
-|     |--myFlights.php
-├── index.php     # Home page
-├── README.md     # Documentation file
+/architecture
+|-- features.docx
+|-- UML_WebService_Project.drawio
+|-- architecture.png
+|-- architecture_diagram.drawio
+
+/database
+|-- db_backup.sql
+|-- db_diagram.png
+|-- flights.sql
+|-- reservations.sql
+|-- travel_bookingdb.sql
+|-- users.sql.php
+
+/components
+|-- fetch_flights.php
+|-- login.php
+|-- passenger.php
+|-- signUp.php
+
+/css
+|-- main.css
+
+/images
+|-- diana.jpeg
+|-- header_fly.png
+|-- jess.jpeg
+|-- lucas.jpeg
+|-- zenha.jpeg
+
+/includes
+|-- db.php 
+|-- footer.php
+|-- header-member.php
+|-- sessions.php
+
+/pages
+|-- aboutus.php
+|-- account.php
+|-- book_flight.php
+|-- cancel_flight.php
+|-- contact.php
+|-- dashboard.php
+|-- myFlights.php
+
+index.php       # Home page
+README.md       # Documentation file
 

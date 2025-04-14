@@ -143,7 +143,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && count($flights) > 0) {
 
 
 <div class="faq">
-    
 <b><p><h3>Frequently Asked Questions</h3></b></p>
       <div class="faq-section">
           <div class="faq-question" onclick="toggleFAQ('faq1')">How can I find last-minute flight deals?</div>
