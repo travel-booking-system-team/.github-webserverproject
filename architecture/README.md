@@ -79,7 +79,7 @@ The database schema is designed to store information about users, flights, and r
 ![Database Schema](https://github.com/travel-booking-system-team/.github-webserverproject/blob/main/database/db_diagram.png)
 
 **📌 Database Script:**  
-![Database Script](https://github.com/travel-booking-system-team/.github-webserverproject/blob/main/database/db_backup.sql)
+![Database Script](https://github.com/travel-booking-system-team/.github-webserverproject/blob/main/database/travel_bookingdb.sql.sql)
 
 ---
 
