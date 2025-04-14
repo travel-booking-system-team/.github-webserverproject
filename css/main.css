@@ -74,8 +74,9 @@ input[type='submit']:hover {
 }
 
 .container {
-  max-width: 90%;
+  max-width: 100%;
   margin: auto;
+  background-color: #f5f5dcff;
 }
 
 .header-container {
@@ -422,18 +423,22 @@ h1 {
 
 .card-about {
   border-radius: 8px;
-  overflow: hidden;
-  width: 1100px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
   cursor: pointer;
+  background-color: #111827ff;    
+  color: white;
+  padding: 30px;            
+  max-width: 1100px;   
+  margin: 0 auto;  
 }
+
 
 .card {
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
-  width: 300px;
+  width: 250px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
   cursor: pointer;

@@ -1,5 +1,11 @@
 <?php include '../includes/sessions.php';?>
 
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="../css/main.css">
 
 <?php include '../includes/header-member.php';?>
@@ -29,7 +35,7 @@
                         <div class="row">
                             <div class="col-md-4 mb-4">
                                 <div class="card">
-                                    <img src="images/destinations/new-york.jpeg" class="card-img-top" alt="New York">
+                                    <img src="../images/destinations/new-york.jpeg" class="card-img-top" alt="New York">
                                     <div class="card-body">
                                         <h5>New York</h5>
                                         <p>Experience the vibrant culture and iconic skyline of the Big Apple.</p>
@@ -38,7 +44,7 @@
                             </div>
                             <div class="col-md-4 mb-4">
                                 <div class="card">
-                                    <img src="images/destinations/paris.jpeg" class="card-img-top" alt="Paris">
+                                    <img src="../images/destinations/paris.jpeg" class="card-img-top" alt="Paris">
                                     <div class="card-body">
                                         <h5>Paris</h5>
                                         <p>Discover the romance and beauty of the City of Light.</p>
@@ -47,7 +53,7 @@
                             </div>
                             <div class="col-md-4 mb-4">
                                 <div class="card">
-                                    <img src="images/destinations/london.jpeg" class="card-img-top" alt="London">
+                                    <img src="../images/destinations/london.jpeg" class="card-img-top" alt="London">
                                     <div class="card-body">
                                         <h5>London</h5>
                                         <p>Explore the rich history and modern charm of England's capital.</p>
@@ -95,7 +101,7 @@
                         <div class="row">
                             <div class="col-md-3 mb-4">
                                 <div class="card team-member">
-                                    <img src="images/team/jess.jpeg" class="card-img-top" alt="CEO">
+                                    <img src="../images/team/jess.jpeg" class="card-img-top" alt="CEO">
                                     <div class="card-body text-center">
                                         <h5>Jessica N Hattori</h5>
                                         <p class="text-muted">CEO & Founder</p>
@@ -109,7 +115,7 @@
                             </div>
                             <div class="col-md-3 mb-4">
                                 <div class="card team-member">
-                                    <img src="images/team/diana.jpeg" class="card-img-top" alt="Operations Director">
+                                    <img src="../images/team/diana.jpeg" class="card-img-top" alt="Operations Director">
                                     <div class="card-body text-center">
                                         <h5>Diana Toala</h5>
                                         <p class="text-muted">Operations Director</p>
@@ -123,7 +129,7 @@
                             </div>
                             <div class="col-md-3 mb-4">
                                 <div class="card team-member">
-                                    <img src="images/team/zenha.jpeg" class="card-img-top" alt="Tech Lead">
+                                    <img src="../images/team/zenha.jpeg" class="card-img-top" alt="Tech Lead">
                                     <div class="card-body text-center">
                                         <h5>Zenha Carolina</h5>
                                         <p class="text-muted">Tech Lead</p>
@@ -137,7 +143,7 @@
                             </div>
                             <div class="col-md-3 mb-4">
                                 <div class="card team-member">
-                                    <img src="images/team/lucas.jpeg" class="card-img-top" alt="Customer Service Manager">
+                                    <img src="../images/team/lucas.jpeg" class="card-img-top" alt="Customer Service Manager">
                                     <div class="card-body text-center">
                                         <h5>Lucas Omeira</h5>
                                         <p class="text-muted">Customer Service Manager</p>
