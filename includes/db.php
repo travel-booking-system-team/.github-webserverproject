@@ -6,7 +6,7 @@
   $charset  = 'utf8mb4';  
 
   $username = 'jessicanahat';           
-  $password = 'phpclass2025'; 
+  $password = 'phpclass20cxvklxmvlkcxm vxmv;x/ v;lx25'; 
 
   $options  = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
