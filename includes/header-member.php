@@ -42,7 +42,6 @@ $baseLink = (str_contains($_SERVER['SCRIPT_NAME'], '/pages/')) ? '..' : '.';
             <li><a href="<?= $baseLink ?>/pages/contact.php">Contact</a></li>
           </ul>
         </nav>
-
         <!-- right nav -->
         <nav class="header-nav-right">
           
@@ -61,6 +60,11 @@ $baseLink = (str_contains($_SERVER['SCRIPT_NAME'], '/pages/')) ? '..' : '.';
               <li><a href="<?= $baseLink ?>/pages/signup.php">Sign Up</a></li>
               <li><a href="<?= $baseLink ?>/pages/login.php">Log In</a></li>
             <?php endif; ?>
+        <!-- right nav -->
+        <nav class="header-nav-right">
+          <ul>
+            <li><a href="#" onclick="openModal('SingUp')">Sign Up</a></li>
+            <li><a href="#" onclick="openModal('LogIn')">Log In</a></li>
           </ul>
         </nav>
       </div>

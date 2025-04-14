@@ -38,8 +38,6 @@
     header('Location: login.php');
     exit;
   }
-
-
   function require_login ( $logged_in ) {
     if ( $logged_in == false ) {
       header( 'Location: login.php' );
