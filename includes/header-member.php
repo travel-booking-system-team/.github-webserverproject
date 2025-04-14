@@ -55,7 +55,7 @@ $baseLink = (str_contains($_SERVER['SCRIPT_NAME'], '/pages/')) ? '..' : '.';
               <!-- Exibe o nome do usuário e os links de Dashboard e My Account -->
               <li><a href="<?= $baseLink ?>/pages/dashboard.php">Dashboard</a></li>
               <li><a href="<?= $baseLink ?>/pages/account.php">My Account</a></li>
-              <li><a href="<?= $baseLink ?>/pages/logout.php">Log Out</a></li>
+              <li><a href="<?= $baseLink ?>/pages/logout.php" onclick="logout()">Log Out</a></li>
             <?php else: ?>
               <!-- Se não estiver logado, exibe os links para Login e Sign Up -->
               <li><a href="<?= $baseLink ?>/pages/signup.php">Sign Up</a></li>

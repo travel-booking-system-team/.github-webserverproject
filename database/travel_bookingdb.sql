@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 09, 2025 at 04:32 PM
+-- Generation Time: Apr 14, 2025 at 11:45 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -45,16 +45,15 @@ CREATE TABLE `flights` (
 --
 
 INSERT INTO `flights` (`flight_id`, `flight_number`, `departure_airport`, `arrival_airport`, `departure_date`, `arrival_date`, `price`, `available_seats`, `created_at`, `updated_at`) VALUES
-(1, 'AA101', 'JFK International Airport', 'Toronto Pearson International Airport', '2025-05-01 08:00:00', '2025-05-01 10:30:00', 320.00, 150, '2025-04-04 15:25:51', '2025-04-04 15:25:51'),
-(2, 'DL202', 'Toronto Pearson International Airport', 'Montreal-Pierre Elliott Trudeau International Airport', '2025-05-02 11:00:00', '2025-05-02 12:30:00', 180.00, 120, '2025-04-04 15:25:51', '2025-04-04 15:25:51'),
-(3, 'UA303', 'Montreal-Pierre Elliott Trudeau International Airport', 'Vancouver International Airport', '2025-05-03 13:00:00', '2025-05-03 15:30:00', 220.00, 180, '2025-04-04 15:25:51', '2025-04-04 15:25:51'),
-(4, 'SW404', 'Vancouver International Airport', 'Calgary International Airport', '2025-05-04 07:30:00', '2025-05-04 09:00:00', 250.00, 200, '2025-04-04 15:25:51', '2025-04-04 15:25:51'),
-(5, 'BA505', 'Calgary International Airport', 'Ottawa Macdonald-Cartier International Airport', '2025-05-05 14:00:00', '2025-05-05 17:00:00', 210.00, 100, '2025-04-04 15:25:51', '2025-04-04 15:25:51'),
-(6, 'AA606', 'Los Angeles International Airport', 'Miami International Airport', '2025-05-06 09:00:00', '2025-05-06 12:30:00', 230.00, 180, '2025-04-04 15:25:51', '2025-04-04 15:25:51'),
-(7, 'DL707', 'Miami International Airport', 'John F. Kennedy International Airport', '2025-05-07 14:00:00', '2025-05-07 16:30:00', 280.00, 160, '2025-04-04 15:25:51', '2025-04-04 15:25:51'),
-(8, 'AV202', 'Mariscal Sucre International Airport', 'El Dorado International Airport', '2025-05-08 08:00:00', '2025-05-08 10:30:00', 200.00, 140, '2025-04-04 15:25:51', '2025-04-04 15:25:51'),
-(9, 'AV307', 'Simón Bolívar International Airport', 'El Dorado International Airport', '2025-05-09 11:00:00', '2025-05-09 13:30:00', 220.00, 130, '2025-04-04 15:25:51', '2025-04-04 15:25:51'),
-(10, 'GG510', 'São Paulo–Guarulhos International Airport', 'Rio de Janeiro–Galeão International Airport', '2025-05-10 06:00:00', '2025-05-10 07:30:00', 150.00, 200, '2025-04-04 15:25:51', '2025-04-04 15:25:51');
+(1, 'AA101', 'JFK', 'Toronto', '2025-05-01 08:00:00', '2025-05-01 10:30:00', 320.00, 150, '2025-04-04 15:25:51', '2025-04-14 03:10:38'),
+(2, 'DL202', 'Toronto', 'Montreal', '2025-05-02 11:00:00', '2025-05-02 12:30:00', 180.00, 120, '2025-04-04 15:25:51', '2025-04-14 03:10:52'),
+(3, 'UA303', 'Montreal', 'Vancouver', '2025-05-03 13:00:00', '2025-05-03 15:30:00', 220.00, 180, '2025-04-04 15:25:51', '2025-04-14 03:11:07'),
+(4, 'SW404', 'Vancouver', 'Calgary', '2025-05-04 07:30:00', '2025-05-04 09:00:00', 250.00, 200, '2025-04-04 15:25:51', '2025-04-14 03:11:16'),
+(5, 'BA505', 'Calgary', 'Ottawa', '2025-05-05 14:00:00', '2025-05-05 17:00:00', 210.00, 100, '2025-04-04 15:25:51', '2025-04-14 03:11:22'),
+(6, 'AA606', 'Los Angeles', 'Miami', '2025-05-06 09:00:00', '2025-05-06 12:30:00', 230.00, 180, '2025-04-04 15:25:51', '2025-04-14 03:11:27'),
+(7, 'DL707', 'Miami', 'Toronto', '2025-05-07 14:00:00', '2025-05-07 16:30:00', 280.00, 160, '2025-04-04 15:25:51', '2025-04-14 03:11:42'),
+(8, 'AV202', 'Mariscal', 'Montreal', '2025-05-08 08:00:00', '2025-05-08 10:30:00', 200.00, 140, '2025-04-04 15:25:51', '2025-04-14 03:11:49'),
+(10, 'GG510', 'São Paulo', 'Rio de Janeiro', '2025-05-10 06:00:00', '2025-05-10 07:30:00', 150.00, 200, '2025-04-04 15:25:51', '2025-04-14 03:12:03');
 
 -- --------------------------------------------------------
 
@@ -203,7 +202,9 @@ INSERT INTO `reservations` (`reservation_id`, `user_id`, `flight_id`, `reservati
 (2, 1, 2, '2025-04-04 15:25:51', 'pending', 'unpaid', '2025-04-04 15:25:51', '2025-04-04 15:25:51'),
 (3, 2, 3, '2025-04-04 15:25:51', 'pending', 'unpaid', '2025-04-04 15:25:51', '2025-04-04 15:25:51'),
 (4, 3, 4, '2025-04-04 15:25:51', 'pending', 'unpaid', '2025-04-04 15:25:51', '2025-04-04 15:25:51'),
-(5, 4, 5, '2025-04-04 15:25:51', 'pending', 'unpaid', '2025-04-04 15:25:51', '2025-04-04 15:25:51');
+(5, 4, 5, '2025-04-04 15:25:51', 'pending', 'unpaid', '2025-04-04 15:25:51', '2025-04-04 15:25:51'),
+(7, 1, 1, '2025-04-14 10:25:02', 'pending', 'unpaid', '2025-04-14 10:25:02', '2025-04-14 10:25:02'),
+(9, 1, 4, '2025-04-14 10:31:06', 'pending', 'unpaid', '2025-04-14 10:31:06', '2025-04-14 10:31:06');
 
 -- --------------------------------------------------------
 
@@ -225,7 +226,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `fullname`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'Zenha Solorzano', 'zenha.solo@example.com', '$2y$10$T0QPLdZPpkMuVdD/mU4O7e/a6OAY8QHvGZAYY3lKkQgkO3rBL05bm', '2025-04-04 15:24:41', '2025-04-04 15:24:41'),
+(1, 'Zenha Solorzano', 'zenha.solo@example.com', '$2y$10$BU7R9x9SwHZOUH.8tSfoBOyqeH381PzmwfPkRI2mehXpltBSXgjei', '2025-04-04 15:24:41', '2025-04-14 00:00:36'),
 (2, 'Diana Toala', 'diana.toala@example.com', '$2y$10$PrllnVyn1K1yQDe/9IkXKO9bysp3m2d1OcR4Z28UK6XT/HE1hENlK', '2025-04-04 15:24:41', '2025-04-04 15:24:41'),
 (3, 'Jessica Narita', 'jessica.narita@example.com', '$2y$10$17y4RvNhitDIOT4PZo8HceLiwOHvBH2WtawAA5ofdegG5idpyQmo2', '2025-04-04 15:24:41', '2025-04-04 15:24:41'),
 (4, 'Lucas Meira', 'lucas.meira@example.com', '$2y$10$pp6Z9EQ84ZttnJzI5BcuGuDyv/tBH.RR.lMH4eaK64O2WvS3q6hMO', '2025-04-04 15:24:41', '2025-04-04 15:24:41');
@@ -307,7 +308,7 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT for table `reservations`
 --
 ALTER TABLE `reservations`
-  MODIFY `reservation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `reservation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`

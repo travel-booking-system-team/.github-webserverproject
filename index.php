@@ -61,8 +61,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && count($flights) === 0) {
             <div>
                 <label>From:</label>
                 <select name="origin">
-                    <option>Select</option>
+                <option>Select</option>
+                    <option>JFK</option>
                     <option>Toronto</option>
+                    <option>Los Angeles</option>
+                    <option>Miami</option>
+                    <option>Mariscal</option>
+                    <option>São Paulo</option>
+                    <option>Rio de Janeiro</option>
                     <option>Montreal</option>
                     <option>Vancouver</option>
                     <option>Calgary</option>
@@ -73,7 +79,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && count($flights) === 0) {
                <label>To:</label>
                <select name="destination">
                     <option>Select</option>
+                    <option>JFK</option>
                     <option>Toronto</option>
+                    <option>Los Angeles</option>
+                    <option>Miami</option>
+                    <option>Mariscal</option>
+                    <option>São Paulo</option>
+                    <option>Rio de Janeiro</option>
                     <option>Montreal</option>
                     <option>Vancouver</option>
                     <option>Calgary</option>
