@@ -3,13 +3,15 @@
   session_start();
 
   $logged_in = $_SESSION[ 'logged_in' ] ?? false;
-  $email     = 'sally@example.com';
-  $password  = 'password';
+  $fullname=$_SESSION['fullname'] ?? false;
+  $id=$_SESSION['id'] ?? false;
   
-  function login () {
+  function login ($member) {
     session_regenerate_id( true );
     // Set the value of `logged_in` to `true` in the session
     $_SESSION[ 'logged_in' ] = true;
+    $_SESSION['fullname']=$member['fullname'];
+    $_SESSION['user_id']=$member['user_id'];
   }
 
   function logout () {
@@ -37,7 +39,7 @@
   //
   function require_login ( $logged_in ) {
     if ( $logged_in == false ) {
-      header( 'Location: index.php' );
+      header( 'Location: login.php' );
       exit;
     }
   }
