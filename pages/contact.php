@@ -13,12 +13,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <link rel="stylesheet" href="../css/main.css">
+
 <div class="contact-info-container">
     <h2>Contact Information</h2>
-    <p><img src="img/address-icon.png" alt="Address"> <strong>Address:</strong> 2000 Saint-Catherine St W, Montreal, QC</p>
-    <p><img src="img/phone-icon.png" alt="Phone"> <strong>Phone:</strong> +1 (438) 123-4567</p>
-    <p><img src="img/email-icon.png" alt="Email"> <strong>Email:</strong> contact@travelbookingsystem.com</p>
-    <p><img src="img/clock-icon.png" alt="Hours"> <strong>Hours:</strong> Mon-Fri, 9:00 AM - 6:00 PM</p>
+    <p><i class="fas fa-map-marker-alt me-2 text-warning"></i> <strong>Address:</strong> 2000 Saint-Catherine St W, Montreal, QC - Canada.</p>
+    <p><i class="fas fa-phone-alt me-2 text-success"></i> <strong>Phone:</strong> +1 (438) 123-4567</p>
+    <p><i class="fas fa-envelope me-2 text-danger"></i> <strong>Email:</strong> contact@travelbookingsystem.com</p>
+    <p><i class="fas fa-clock me-2 text-info"></i> <strong>Hours:</strong> Mon–Fri, 9:00 AM – 6:00 PM</p>
 </div>
 
 
