@@ -65,16 +65,10 @@ $baseLink = (str_contains($_SERVER['SCRIPT_NAME'], '/pages/')) ? '..' : '.';
               <li><a href="<?= $baseLink ?>/pages/logout.php" onclick="logout()">Log Out</a></li>
             <?php else: ?>
               <!-- Se não estiver logado, exibe os links para Login e Sign Up -->
-              <li><a href="<?= $baseLink ?>/pages/signup.php">Sign Up</a></li>
-              <li><a href="<?= $baseLink ?>/pages/login.php">Log In</a></li>
+              <li><a href="<?= $baseLink ?>/components/signUp.php">Sign Up</a></li>
+              <li><a href="<?= $baseLink ?>/components/login.php">Log In</a></li>
             <?php endif; ?>
-        <!-- right nav -->
-        <nav class="header-nav-right">
-          <ul>
-            <li><a href="#" onclick="openModal('SingUp')">Sign Up</a></li>
-            <li><a href="#" onclick="openModal('LogIn')">Log In</a></li>
-          </ul>
-        </nav>
+        
       </div>
     </div>
   </div>
