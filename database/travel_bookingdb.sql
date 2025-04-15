@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2025 at 11:45 AM
+-- Generation Time: Apr 16, 2025 at 01:52 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -37,23 +37,26 @@ CREATE TABLE `flights` (
   `price` decimal(10,2) NOT NULL,
   `available_seats` int(11) NOT NULL,
   `created_at` datetime DEFAULT current_timestamp(),
-  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `picture` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `flights`
 --
 
-INSERT INTO `flights` (`flight_id`, `flight_number`, `departure_airport`, `arrival_airport`, `departure_date`, `arrival_date`, `price`, `available_seats`, `created_at`, `updated_at`) VALUES
-(1, 'AA101', 'JFK', 'Toronto', '2025-05-01 08:00:00', '2025-05-01 10:30:00', 320.00, 150, '2025-04-04 15:25:51', '2025-04-14 03:10:38'),
-(2, 'DL202', 'Toronto', 'Montreal', '2025-05-02 11:00:00', '2025-05-02 12:30:00', 180.00, 120, '2025-04-04 15:25:51', '2025-04-14 03:10:52'),
-(3, 'UA303', 'Montreal', 'Vancouver', '2025-05-03 13:00:00', '2025-05-03 15:30:00', 220.00, 180, '2025-04-04 15:25:51', '2025-04-14 03:11:07'),
-(4, 'SW404', 'Vancouver', 'Calgary', '2025-05-04 07:30:00', '2025-05-04 09:00:00', 250.00, 200, '2025-04-04 15:25:51', '2025-04-14 03:11:16'),
-(5, 'BA505', 'Calgary', 'Ottawa', '2025-05-05 14:00:00', '2025-05-05 17:00:00', 210.00, 100, '2025-04-04 15:25:51', '2025-04-14 03:11:22'),
-(6, 'AA606', 'Los Angeles', 'Miami', '2025-05-06 09:00:00', '2025-05-06 12:30:00', 230.00, 180, '2025-04-04 15:25:51', '2025-04-14 03:11:27'),
-(7, 'DL707', 'Miami', 'Toronto', '2025-05-07 14:00:00', '2025-05-07 16:30:00', 280.00, 160, '2025-04-04 15:25:51', '2025-04-14 03:11:42'),
-(8, 'AV202', 'Mariscal', 'Montreal', '2025-05-08 08:00:00', '2025-05-08 10:30:00', 200.00, 140, '2025-04-04 15:25:51', '2025-04-14 03:11:49'),
-(10, 'GG510', 'São Paulo', 'Rio de Janeiro', '2025-05-10 06:00:00', '2025-05-10 07:30:00', 150.00, 200, '2025-04-04 15:25:51', '2025-04-14 03:12:03');
+INSERT INTO `flights` (`flight_id`, `flight_number`, `departure_airport`, `arrival_airport`, `departure_date`, `arrival_date`, `price`, `available_seats`, `created_at`, `updated_at`, `picture`) VALUES
+(1, 'AA101', 'Caracas', 'Toronto', '2025-05-01 08:00:00', '2025-05-01 10:30:00', 320.00, 150, '2025-04-04 15:25:51', '2025-04-15 14:41:17', 'images/destinations/toronto.png'),
+(2, 'DL202', 'Toronto', 'Montreal', '2025-05-02 11:00:00', '2025-05-02 12:30:00', 180.00, 120, '2025-04-04 15:25:51', '2025-04-15 14:41:20', 'images/destinations/montreal.png'),
+(3, 'UA303', 'Montreal', 'Vancouver', '2025-05-03 13:00:00', '2025-05-03 15:30:00', 220.00, 180, '2025-04-04 15:25:51', '2025-04-15 14:41:26', 'images/destinations/vancouver.png'),
+(4, 'SW404', 'Vancouver', 'Calgary', '2025-05-04 07:30:00', '2025-05-04 09:00:00', 250.00, 200, '2025-04-04 15:25:51', '2025-04-15 14:41:31', 'images/destinations/calgary.png'),
+(5, 'BA505', 'Calgary', 'Ottawa', '2025-05-05 14:00:00', '2025-05-05 17:00:00', 210.00, 100, '2025-04-04 15:25:51', '2025-04-15 14:41:35', 'images/destinations/ottawa.png'),
+(6, 'AA606', 'Los Angeles', 'Miami', '2025-05-06 09:00:00', '2025-05-06 12:30:00', 230.00, 180, '2025-04-04 15:25:51', '2025-04-15 14:41:38', 'images/destinations/miami.png'),
+(7, 'DL707', 'Miami', 'Toronto', '2025-05-07 14:00:00', '2025-05-07 16:30:00', 280.00, 160, '2025-04-04 15:25:51', '2025-04-15 14:41:41', 'images/destinations/toronto.png'),
+(8, 'AV202', 'Mariscal', 'Montreal', '2025-05-08 08:00:00', '2025-05-08 10:30:00', 200.00, 140, '2025-04-04 15:25:51', '2025-04-15 14:41:44', 'images/destinations/montreal.png'),
+(10, 'GG510', 'São Paulo', 'Rio de Janeiro', '2025-05-10 06:00:00', '2025-05-10 07:30:00', 150.00, 200, '2025-04-04 15:25:51', '2025-04-15 14:41:46', 'images/destinations/rio_de_janeiro.png'),
+(11, 'GG510', 'São Paulo', 'Miami', '2025-05-10 06:00:00', '2025-05-10 07:30:00', 150.00, 200, '2025-04-04 15:25:51', '2025-04-15 14:41:50', 'images/destinations/miami.png'),
+(12, 'GG510', 'Calgary', 'São Paulo', '2025-05-10 06:00:00', '2025-05-10 07:30:00', 150.00, 200, '2025-04-04 15:25:51', '2025-04-15 14:49:21', 'images/destinations/sao_paulo.png');
 
 -- --------------------------------------------------------
 
@@ -229,7 +232,8 @@ INSERT INTO `users` (`user_id`, `fullname`, `email`, `password`, `created_at`, `
 (1, 'Zenha Solorzano', 'zenha.solo@example.com', '$2y$10$BU7R9x9SwHZOUH.8tSfoBOyqeH381PzmwfPkRI2mehXpltBSXgjei', '2025-04-04 15:24:41', '2025-04-14 00:00:36'),
 (2, 'Diana Toala', 'diana.toala@example.com', '$2y$10$PrllnVyn1K1yQDe/9IkXKO9bysp3m2d1OcR4Z28UK6XT/HE1hENlK', '2025-04-04 15:24:41', '2025-04-04 15:24:41'),
 (3, 'Jessica Narita', 'jessica.narita@example.com', '$2y$10$17y4RvNhitDIOT4PZo8HceLiwOHvBH2WtawAA5ofdegG5idpyQmo2', '2025-04-04 15:24:41', '2025-04-04 15:24:41'),
-(4, 'Lucas Meira', 'lucas.meira@example.com', '$2y$10$pp6Z9EQ84ZttnJzI5BcuGuDyv/tBH.RR.lMH4eaK64O2WvS3q6hMO', '2025-04-04 15:24:41', '2025-04-04 15:24:41');
+(4, 'Lucas Meira', 'lucas.meira@example.com', '$2y$10$pp6Z9EQ84ZttnJzI5BcuGuDyv/tBH.RR.lMH4eaK64O2WvS3q6hMO', '2025-04-04 15:24:41', '2025-04-04 15:24:41'),
+(5, 'Alisa Contreras', 'alisa@gmail.com', '$2y$10$psVDQExzPJEiZl7fRe.jo.7VrFvn4ovteSE09EmW.OBWiB9rErqGW', '2025-04-15 15:06:47', '2025-04-15 15:39:39');
 
 --
 -- Indexes for dumped tables
@@ -284,7 +288,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `flights`
 --
 ALTER TABLE `flights`
-  MODIFY `flight_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `flight_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `flight_seats`
@@ -314,7 +318,7 @@ ALTER TABLE `reservations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
