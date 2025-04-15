@@ -38,7 +38,7 @@ $reservations = $stmt->fetchAll();
             <?php foreach ($reservations as $flight): ?>
                 <div class="flight-card">
                     <div class="card-header">
-                        <h3 class="flight-number"><?= htmlspecialchars($flight['flight_number']) ?></h3>
+                        <h3 class="flight-number"><?= htmlspecialchars($flight['arrival_airport']) ?></h3>
                         <p class="price">$<?= number_format($flight['price'], 2, '.', ',') ?></p>
                     </div>
                     <div class="card-body">
@@ -47,7 +47,7 @@ $reservations = $stmt->fetchAll();
                             <p><strong>From:</strong> <?= htmlspecialchars($flight['departure_airport']) ?></p>
                             <p><strong>Date:</strong> <?= date('Y-m-d H:i', strtotime($flight['departure_date'])) ?></p>
                         </div>
-                        <div class="arrival">
+                        <div class="departure">
                             <h4>Arrival</h4>
                             <p><strong>To:</strong> <?= htmlspecialchars($flight['arrival_airport']) ?></p>
                             <p><strong>Date:</strong> <?= date('Y-m-d H:i', strtotime($flight['arrival_date'])) ?></p>
@@ -55,6 +55,7 @@ $reservations = $stmt->fetchAll();
                     </div>
                     <div class="card-footer">
                         <p><strong>Reserved on:</strong> <?= date('Y-m-d H:i', strtotime($flight['reservation_date'])) ?></p>
+                        <p><strong>Flight number:</strong> <?= $flight['flight_number'] ?></p>
                     </div>
                 </div>
             <?php endforeach; ?>
