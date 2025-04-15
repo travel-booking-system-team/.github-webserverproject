@@ -1,12 +1,12 @@
 <?php
   $type     = 'mysql';     
   $server   = 'localhost';  
-  $db       = 'travelbookingdb';       
-  $port     = '3308';    
+  $db       = 'travel_bookingdb';       
+  $port     = '3306';    
   $charset  = 'utf8mb4';  
 
-  $username = 'jessicanahat';           
-  $password = 'phpclass20cxvklxmvlkcxm vxmv;x/ v;lx25'; 
+  $username = 'zenha';           
+  $password = 'JesusisKing7'; 
 
   $options  = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,

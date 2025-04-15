@@ -81,7 +81,7 @@ input[type='submit']:hover {
 
 .header-container {
   position: relative;
-  width: 70%;  
+  width: 80%;  
   max-width: 1200px;  
   height: 250px;  
   margin: 20px auto;  
@@ -405,15 +405,17 @@ input[type='submit']:hover {
 .user-name {
   color: #eab308;
   font-weight: bold;
-  margin-left: 58%
+  text-align: right;
+  display: block;
+  width: 100%;
+  margin-right: 5%;
 }
 
 
 
 .container_trips {
   text-align: center;
-  margin-top:5%;
-  margin-bottom:5%;
+  margin:2% 9% 2% 9%;
 }
 
 
@@ -426,7 +428,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .card-about {
@@ -486,7 +488,7 @@ h1 {
 /* Estilos do card de voo */
 .flight-card_d {
   width: 350px;
-  background-color: #ffffff;
+  background-color: #d6623eff;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -574,24 +576,30 @@ h1 {
 }
 
 
-
+///// search container
 
 .search-container{
   background-color: #001f3d !important;
   width: 100%;
-  padding: 20px 0;
-  margin-top: 5%;
-  margin-top: 20px;
+  margin-top: 2%;
 }
 
 .search {
   background-color: #001f3d; 
-  max-width: 70%; /* Limita a largura para o mesmo tamanho do cabeçalho */
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 80%; /* Limita a largura para o mesmo tamanho do cabeçalho */
+  margin: auto;
+  padding: 2px;
   background-color: #fff; /* Fundo branco para o conteúdo do formulário */
   border-radius: 10px;
   background-color: #001f3d !important;
+}
+
+.departure-field input {
+  width:100px;
+}
+
+.departure-field, .return-field{
+  margin-right:10px;
 }
 
 .faq-section {
@@ -819,3 +827,26 @@ h1 {
 .social-links a:hover {
     color: #0d6efd !important;
 }
+
+.container_trips .cards .card .card-content img {
+  width: 100%;
+  height: 20%;
+  border-radius: 8px;
+}
+
+.container_trips .cards .card {
+  background-color:rgb(225, 200, 128);
+}
+
+.container_trips .cards .card .card-content h3 {
+  text-align: center;
+  color:  #001f3d ;
+} 
+
+.container_trips .cards .card .card-content {
+  color:  #001f3d ;
+}
+
+.container_trips .cards .card .card-content  p {
+  color:  #001f3d !important;
+} 
