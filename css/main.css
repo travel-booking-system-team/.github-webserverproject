@@ -886,3 +886,23 @@ h1 {
   font-weight: bold;
   color: #888;
 }
+
+/* Responsivo a partir de 1227px pra baixo */
+@media (max-width: 1227px) {
+  .search form div {
+    flex: 1 1 100%;
+    max-width: 50%;
+    margin-left: 5%;
+    margin-button: 5%;
+  }
+
+  .search form button {
+    max-width: 500px;
+    margin-top: 60px;
+  }
+
+  .search-container{
+    align-text: center;
+    justify-content: center;
+  }
+}
