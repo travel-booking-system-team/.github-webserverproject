@@ -12,6 +12,10 @@ $fullname = $_SESSION['fullname'] ?? '';
 $basePath = (str_contains($_SERVER['SCRIPT_NAME'], '/pages/')) ? '..' : '.';
 $imagePath = $basePath . '/images/header_fly.png';
 $baseLink = (str_contains($_SERVER['SCRIPT_NAME'], '/pages/')) ? '..' : '.';
+
+include 'sessions.php';
+include 'functions.php';
+require_login($logged_in);
 ?>
 
 <!DOCTYPE html>
@@ -42,35 +46,50 @@ $baseLink = (str_contains($_SERVER['SCRIPT_NAME'], '/pages/')) ? '..' : '.';
       <div class="header-image">
         <img src="<?= $imagePath ?>" alt="Travel Header">
 
-        <!-- left nav -->
-        <nav class="header-nav-left">
+        <!-- Hamburger Menu Button -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
           <ul>
             <li><a href="<?= $baseLink ?>/index.php">Home</a></li>
             <li><a href="<?= $baseLink ?>/pages/aboutus.php">About US</a></li>
             <li><a href="<?= $baseLink ?>/pages/contact.php">Contact</a></li>
+            <li><a href="<?= $baseLink ?>/pages/faq.php">FAQ</a></li>
+            <li><a href="<?= $baseLink ?>/pages/dashboard.php">My Flights</a></li>
+            <li><a href="<?= $baseLink ?>/pages/account.php">My Account</a></li>
+            <li><a href="<?= $baseLink ?>/pages/logout.php" onclick="logout()">Logout</a></li>
           </ul>
         </nav>
-        <!-- right nav -->
-        <nav class="header-nav-right">
-          
-          <ul>        
-            <li class="user-name"><?= $fullname ?></li>
-          </ul>
-          
-          <ul>
-            <?php if ($logged_in): ?>
-              <!-- Exibe o nome do usuário e os links de Dashboard e My Account -->
-              <li><a href="<?= $baseLink ?>/pages/dashboard.php">Dashboard</a></li>
-              <li><a href="<?= $baseLink ?>/pages/account.php">My Account</a></li>
-              <li><a href="<?= $baseLink ?>/pages/logout.php" onclick="logout()">Log Out</a></li>
-            <?php else: ?>
-              <!-- Se não estiver logado, exibe os links para Login e Sign Up -->
-              <li><a href="<?= $baseLink ?>/components/signUp.php">Sign Up</a></li>
-              <li><a href="<?= $baseLink ?>/components/login.php">Log In</a></li>
-            <?php endif; ?>
-        
       </div>
     </div>
   </div>
+
+  <script>
+  function toggleMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.hamburger');
+    
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  }
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.hamburger');
+    
+    if (!navMenu.contains(event.target) && !hamburger.contains(event.target)) {
+      navMenu.classList.remove('active');
+      hamburger.classList.remove('active');
+    }
+  });
+  </script>
+</body>
+</html>
 
 
