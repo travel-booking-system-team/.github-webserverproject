@@ -57,12 +57,14 @@ if ( $logged_in ) {
 }
 ?>
 
-<?php include 'includes/header-member.php'; ?>
-<!-- <link rel="stylesheet" href="../css/main.css"> -->
-
+<?php include '../includes/header-member.php'; ?>
+<link rel="stylesheet" href="../css/main.css">
 <div class="login-container">
-    <h2>Login</h2>
+    <?php
+        $baseLink = (str_contains($_SERVER['SCRIPT_NAME'], '/pages/')) ? '..' : '.';
+    ?>
 
+    <h2>Login</h2>
     <?php if (isset($error_message)) : ?>
         <p class="error"><?= $error_message; ?></p>
     <?php endif; ?>
@@ -86,9 +88,7 @@ if ( $logged_in ) {
     
     <!-- Link to register page -->
     <p class="register-link">
-    Don't have an account? <a href="signup.php">Sign up here</a>
-    </p>
+        Don't have an account? <a href="signup.php">Sign Up here</a>
+     </p>
 </div>
-
-<!-- Include the footer in the includes/ directory -->
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
