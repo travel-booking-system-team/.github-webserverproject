@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && count($flights) === 0) {
                 <label>From:</label>
                 <select name="origin">
                 <option>Select</option>
-                    <option>JFK</option>
+                    <option>Caracas</option>
                     <option>Toronto</option>
                     <option>Los Angeles</option>
                     <option>Miami</option>
@@ -88,17 +88,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && count($flights) === 0) {
                     <option>Vancouver</option>
                     <option>Calgary</option>
                     <option>Ottawa</option>
+                    <option>Caracas</option>
                 </select>  
             </div>
-            <div>
+            <div class="departure-field">
                 <label>Departure:</label>
                 <input type="date" name="departure" value="2025-03-12">
             </div>
-            <div>
+            <div class="return-field">
                 <label>Return:</label>
                 <input type="date" name="return" value="2025-03-19">    
             </div>
-            <div>
+            <div class="passangers-field">
                 <label>Passengers:</label>
                 <select name="passengers">
                     <option>1</option>
@@ -137,10 +138,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && count($flights) > 0) {
             <div class="card">
                 <a href="pages/detalhes.php?flight_id=<?php echo $flight['flight_id']; ?>">
                     <div class="card-content">
-                    <img src="https://source.unsplash.com/200x100/?beach" alt="Flight Image">
-                        <h3 class="card-title"><?php echo $flight['flight_number']; ?></h3>
+                        <img src=<?php echo $flight['picture']; ?> alt="Flight Image">
+                        <h3 class="card-title"><?php echo $flight['arrival_airport']; ?></h3>
                         <p><strong>Origin:</strong> <?php echo $flight['departure_airport']; ?></p>
-                        <p><strong>Destiny:</strong> <?php echo $flight['arrival_airport']; ?></p>
+                        <p><strong>flight:</strong> <?php echo $flight['flight_number']; ?></p>
                         <p><strong>Day:</strong> <?php echo date('d/m/Y H:i', strtotime($flight['departure_date'])); ?></p>
                         <p><strong>Price:</strong> $ <?php echo number_format($flight['price'], 2, ',', '.'); ?></p>
                         <p><strong>Avaliable seats:</strong> <?php echo $flight['available_seats']; ?></p>

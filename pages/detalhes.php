@@ -29,8 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $viagens = [
     1 => [
         'flight_number' => 'AA101',
-        'departure_airport' => 'JFK International Airport',
-        'arrival_airport' => 'Toronto Pearson International Airport',
+        'departure_airport' => 'Caracas',
+        'arrival_airport' => 'Toronto',
         'departure_date' => '2025-05-01 08:00:00',
         'arrival_date' => '2025-05-01 10:30:00',
         'price' => 320.00,
@@ -38,8 +38,8 @@ $viagens = [
     ],
     2 => [
         'flight_number' => 'DL202',
-        'departure_airport' => 'Toronto Pearson International Airport',
-        'arrival_airport' => 'Montreal-Pierre Elliott Trudeau International Airport',
+        'departure_airport' => 'Toronto',
+        'arrival_airport' => 'Montreal',
         'departure_date' => '2025-05-02 11:00:00',
         'arrival_date' => '2025-05-02 12:30:00',
         'price' => 180.00,
@@ -47,8 +47,8 @@ $viagens = [
     ],
     3 => [
         'flight_number' => 'UA303',
-        'departure_airport' => 'Montreal-Pierre Elliott Trudeau International Airport',
-        'arrival_airport' => 'Vancouver International Airport',
+        'departure_airport' => 'Montreal',
+        'arrival_airport' => 'Vancouver',
         'departure_date' => '2025-05-03 13:00:00',
         'arrival_date' => '2025-05-03 15:30:00',
         'price' => 220.00,
@@ -56,8 +56,8 @@ $viagens = [
     ],
     4 => [
         'flight_number' => 'SW404',
-        'departure_airport' => 'Vancouver International Airport',
-        'arrival_airport' => 'Calgary International Airport',
+        'departure_airport' => 'Vancouver',
+        'arrival_airport' => 'Calgary',
         'departure_date' => '2025-05-04 07:30:00',
         'arrival_date' => '2025-05-04 09:00:00',
         'price' => 250.00,
@@ -65,8 +65,8 @@ $viagens = [
     ],
     5 => [
         'flight_number' => 'BA505',
-        'departure_airport' => 'Calgary International Airport',
-        'arrival_airport' => 'Ottawa Macdonald-Cartier International Airport',
+        'departure_airport' => 'Calgary',
+        'arrival_airport' => 'Ottawa',
         'departure_date' => '2025-05-05 14:00:00',
         'arrival_date' => '2025-05-05 17:00:00',
         'price' => 210.00,
@@ -114,10 +114,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['buy_ticket'])) {
 
 <div class="register-container">
     <h2>Flight Details</h2>
-
-    <div class="flight-card_d">
         <div class="card_d-header">
-            <h3 class="flight-number"><?= $flight['flight_number']; ?></h3>
+            <h3 class="flight-number"><?= $flight['arrival_airport']; ?></h3>
             <p class="price">$<?= number_format($flight['price'], 2, '.', ','); ?></p>
         </div>
         <div class="card_d-body">
@@ -126,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['buy_ticket'])) {
                 <p><strong>From:</strong> <?= $flight['departure_airport']; ?></p>
                 <p><strong>Date:</strong> <?= date('Y-m-d H:i', strtotime($flight['departure_date'])); ?></p>
             </div>
-            <div class="arrival_d">
+            <div class="departure">
                 <h4>Arrival</h4>
                 <p><strong>To:</strong> <?= $flight['arrival_airport']; ?></p>
                 <p><strong>Date:</strong> <?= date('Y-m-d H:i', strtotime($flight['arrival_date'])); ?></p>
@@ -135,7 +133,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['buy_ticket'])) {
         <div class="card_d-footer">
             <p><strong>Available Seats:</strong> <?= $flight['available_seats']; ?></p>
         </div>
-    </div>
 </div>
 
 <div class="register-container">

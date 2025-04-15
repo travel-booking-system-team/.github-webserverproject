@@ -31,7 +31,7 @@ $reservations = $stmt->fetchAll();
 
     <?php if (count($reservations) === 0): ?>
         <div class="no-flights">
-            <h1>No flights on your dashboard</h1>
+            <h1>No flights on your dashboard yet</h1>
         </div>
     <?php else: ?>
         <div class="flights-grid_hash">
