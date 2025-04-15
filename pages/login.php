@@ -90,5 +90,9 @@ if ( $logged_in ) {
     <p class="register-link">
         Don't have an account? <a href="signup.php">Sign Up here</a>
      </p>
+     <?php foreach ($errors as $error): ?>
+      <p class="error"><?= htmlspecialchars($error) ?></p>
+    <?php endforeach; ?>
+    
 </div>
 <?php include '../includes/footer.php'; ?>
