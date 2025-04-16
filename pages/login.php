@@ -22,7 +22,7 @@ $senha = '123456'; // Substitua por sua senha
 $hash = password_hash($senha, PASSWORD_BCRYPT);
 
 // Exibir o hash gerado
-echo "O hash da sua senha é: " . $hash;
+//echo "O hash da sua senha é: " . $hash;
 
 // login form
 if ( $logged_in ) {
