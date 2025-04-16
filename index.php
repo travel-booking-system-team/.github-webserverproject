@@ -154,21 +154,56 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && count($flights) > 0) {
 
 
 <div class="faq">
-<b><p><h3>Frequently Asked Questions</h3></b></p>
-      <div class="faq-section">
-          <div class="faq-question" onclick="toggleFAQ('faq1')">How can I find last-minute flight deals?</div>
-          <div class="faq-answer" id="faq1">Check airline websites frequently, use flight comparison tools, and set up price alerts.</div>
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-section">
+        <div class="faq-question" onclick="toggleFAQ('faq1')">
+            <span class="faq-icon">+</span>
+            How can I find last-minute flight deals?
+        </div>
+        <div class="faq-answer" id="faq1">Check airline websites frequently, use flight comparison tools, and set up price alerts.</div>
 
-          <div class="faq-question" onclick="toggleFAQ('faq2')">How can I find deals if my travel plans are flexible?</div>
-          <div class="faq-answer" id="faq2">Try searching for flights on different days or nearby airports to find better deals.</div>
+        <div class="faq-question" onclick="toggleFAQ('faq2')">
+            <span class="faq-icon">+</span>
+            How can I find deals if my travel plans are flexible?
+        </div>
+        <div class="faq-answer" id="faq2">Try searching for flights on different days or nearby airports to find better deals.</div>
 
-          <div class="faq-question" onclick="toggleFAQ('faq3')">How can I find cheap flights to anywhere?</div>
-          <div class="faq-answer" id="faq3">Use tools like Google Flights' "Explore" feature to see cheap flights to various destinations.</div>
+        <div class="faq-question" onclick="toggleFAQ('faq3')">
+            <span class="faq-icon">+</span>
+            How can I find cheap flights to anywhere?
+        </div>
+        <div class="faq-answer" id="faq3">Use tools like Google Flights' "Explore" feature to see cheap flights to various destinations.</div>
 
-          <div class="faq-question" onclick="toggleFAQ('faq4')">How can I get flight alerts for my trip?</div>
-          <div class="faq-answer" id="faq4">Sign up for alerts on airline websites or use services like Skyscanner and Google Flights.</div>
-      </div>
+        <div class="faq-question" onclick="toggleFAQ('faq4')">
+            <span class="faq-icon">+</span>
+            How can I get flight alerts for my trip?
+        </div>
+        <div class="faq-answer" id="faq4">Sign up for alerts on airline websites or use services like Skyscanner and Google Flights.</div>
+    </div>
+    <div class="view-all-faqs">
+        <a href="pages/faq.php" class="faq-button">View All FAQs</a>
+    </div>
 </div>
+
+<script>
+function toggleFAQ(id) {
+    const answer = document.getElementById(id);
+    const question = answer.previousElementSibling;
+    const icon = question.querySelector('.faq-icon');
+    
+    // Close all other FAQs
+    document.querySelectorAll('.faq-answer').forEach(item => {
+        if (item.id !== id && item.classList.contains('active')) {
+            item.classList.remove('active');
+            item.previousElementSibling.querySelector('.faq-icon').textContent = '+';
+        }
+    });
+    
+    // Toggle current FAQ
+    answer.classList.toggle('active');
+    icon.textContent = answer.classList.contains('active') ? '−' : '+';
+}
+</script>
 
 <!-- Include the footer in the includes/ directory -->
 
