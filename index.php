@@ -58,37 +58,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && count($flights) === 0) {
         <form method="POST">
             <div>
                 <label>From:</label>
-                <select name="origin">
-                <option>Select</option>
-                    <option>Caracas</option>
-                    <option>Toronto</option>
-                    <option>Los Angeles</option>
-                    <option>Miami</option>
-                    <option>Mariscal</option>
-                    <option>São Paulo</option>
-                    <option>Rio de Janeiro</option>
-                    <option>Montreal</option>
-                    <option>Vancouver</option>
-                    <option>Calgary</option>
-                    <option>Ottawa</option>
+                <select name="origin" required>
+                    <option value="">Select</option>
+                    <option value="Caracas">Caracas</option>
+                    <option value="Toronto">Toronto</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Miami">Miami</option>
+                    <option value="Mariscal">Mariscal</option>
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                    <option value="Montreal">Montreal</option>
+                    <option value="Vancouver">Vancouver</option>
+                    <option value="Calgary">Calgary</option>
+                    <option value="Ottawa">Ottawa</option>
                 </select>                
             </div>
             <div>
                <label>To:</label>
-               <select name="destination">
-                    <option>Select</option>
-                    <option>JFK</option>
-                    <option>Toronto</option>
-                    <option>Los Angeles</option>
-                    <option>Miami</option>
-                    <option>Mariscal</option>
-                    <option>São Paulo</option>
-                    <option>Rio de Janeiro</option>
-                    <option>Montreal</option>
-                    <option>Vancouver</option>
-                    <option>Calgary</option>
-                    <option>Ottawa</option>
-                    <option>Caracas</option>
+               <select name="destination" required>
+                    <option value="">Select</option>
+                    <option value="JFK">JFK</option>
+                    <option value="Toronto">Toronto</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Miami">Miami</option>
+                    <option value="Mariscal">Mariscal</option>
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                    <option value="Montreal">Montreal</option>
+                    <option value="Vancouver">Vancouver</option>
+                    <option value="Calgary">Calgary</option>
+                    <option value="Ottawa">Ottawa</option>
+                    <option value="Caracas">Caracas</option>
                 </select>  
             </div>
             <div class="departure-field">

@@ -2,7 +2,7 @@
   $type     = 'mysql';     
   $server   = 'localhost';  
   $db       = 'travel_bookingdb';       
-  $port     = '3306';    
+  $port     = '3308';    
   $charset  = 'utf8mb4';  
 
   $username = 'zenha';           
