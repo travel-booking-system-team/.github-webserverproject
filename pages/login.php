@@ -81,8 +81,8 @@ if ( $logged_in ) {
         </div>
 
         <div class="form-buttons">
-            <button type="button" class="cancel-button" onclick="closeModal()">Cancel</button>
             <button type="submit" class="submit-button">Login</button>
+            <a href="index.php" class="cancel-button">Cancel</a>
         </div>
     </form>
     

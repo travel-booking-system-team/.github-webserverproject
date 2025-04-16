@@ -66,14 +66,14 @@ $reservations = $stmt->fetchAll();
                             <p><strong>To:</strong> <?= htmlspecialchars($flight['arrival_airport']) ?></p>
                             <p><strong>Date:</strong> <?= date('Y-m-d H:i', strtotime($flight['arrival_date'])) ?></p>
                         </div>
-                    </div>
-                    <div class="card-footer">
-                        <p><strong>Reserved on:</strong> <?= date('Y-m-d H:i', strtotime($flight['reservation_date'])) ?></p>
-                        <p><strong>Flight number:</strong> <?= $flight['flight_number'] ?></p>
-                        <form action="cancel_flight.php" method="POST" onsubmit="return confirmCancel()">
-                            <input type="hidden" name="reservation_id" value="<?= $flight['reservation_id'] ?>">
-                            <button type="submit" class="cancel-button">Cancel Flight</button>
-                        </form>
+                        <div class="card-footer">
+                            <p><strong>Reserved on:</strong> <?= date('Y-m-d H:i', strtotime($flight['reservation_date'])) ?></p>
+                            <p><strong>Flight number:</strong> <?= $flight['flight_number'] ?></p>
+                            <form action="cancel_flight.php" method="POST" onsubmit="return confirmCancel()">
+                                <input type="hidden" name="reservation_id" value="<?= $flight['reservation_id'] ?>">
+                                <button type="submit" class="dashboard-cancel-button">Cancel Flight</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             <?php endforeach; ?>

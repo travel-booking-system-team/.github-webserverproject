@@ -249,19 +249,21 @@ input[type='submit']:hover {
 
 
 .cancel-button {
-  background-color: #d6623eff;
-  color: white;
+  background-color: #878b95ff;
+  color: #1a2745ff;
   border: none;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s;
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
-  width: 100%;
+  text-transform: uppercase;
+  margin-top: 15px;
 }
 
+.cancel-button:hover {
+  opacity: 0.8;
+}
 
 .submit-button {
   background-color: #eab308ff;
@@ -270,13 +272,12 @@ input[type='submit']:hover {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 15px;
 }
 
-
-.cancel-button:hover {
-  background-color: #c55330;
-  transform: translateY(-2px);
-}
 
 .register-link {
   text-align: center;
@@ -768,6 +769,29 @@ h1 {
   margin: 20px;
   border-radius: 8px;
   color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  margin-bottom: 15px;
+}
+
+.card-body {
+  flex-grow: 1;
+  margin-bottom: 15px;
+}
+
+.card-footer {
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-footer form {
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .flight-number{
@@ -980,22 +1004,23 @@ h1 {
 }
 
 /* Success and Error Messages */
+.success-message,
+.error-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
 .success-message {
     background-color: #28a745;
     color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 .error-message {
     background-color: #dc3545;
     color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 .card-footer {
@@ -1003,4 +1028,48 @@ h1 {
     padding-top: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 15px;
+}
+
+/* Flights grid layout */
+.flights-grid_hash {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .flight-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .cancel-button {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Specific styling for dashboard cancel button */
+.dashboard-cancel-button {
+    background-color: #dc3545;  /* Red color */
+    color: white;  /* White text for better contrast */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 50%;
+    margin: 10px auto;
+    display: block;
+    transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+.dashboard-cancel-button:hover {
+    background-color: #c82333;  /* Darker red on hover */
 }
