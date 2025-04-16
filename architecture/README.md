@@ -32,25 +32,15 @@
    - Users can cancel their bookings via their account.  
    - Receive an email confirmation.  
 
-✅ **Reschedule a Booking** 🔄  
-   - Modify travel dates (subject to availability).  
-   - Receive an updated confirmation email.  
-
 ✅ **Admin Panel** 🛠  
    - Admins can manage bookings, users, and destinations.  
 
 ✅ **Payment Integration (Optional)** 💳  
    - Secure payment processing using Stripe or PayPal.  
 
-✅ **Email Notifications** 📧  
-   - Automatic emails for booking confirmations, cancellations, and reschedules.  
-
 ✅ **Reviews & Ratings** ⭐  
    - Users can leave feedback and rate destinations.  
    - Admins can moderate reviews.  
-
-✅ **Wishlist/Favorites** ❤️  
-   - Users can save destinations for future bookings.  
 
 ✅ **Basic Support System** 💬  
    - Contact form or chat system for user inquiries.
