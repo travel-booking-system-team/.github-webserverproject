@@ -49,7 +49,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
 
     }
+
+    
+    if (strlen($fullname) < 3) {
+        $errors[] = 'Full name must be at least 3 characters long.';
+    }
+
+    if (strlen($password) < 8 || 
+        !preg_match('/[A-Z]/', $password) || 
+        !preg_match('/[a-z]/', $password) || 
+        !preg_match('/[0-9]/', $password)) {
+        $errors[] = 'Password must be at least 8 characters long and include uppercase, lowercase letters and a number.';
+    }
 }
+
+
 ?>
 
 <?php include '../includes/header-member.php'; ?>
@@ -102,3 +116,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!-- Include the footer in the includes/ directory -->
 <?php include '../includes/footer.php'; ?>
+
+<script>
+document.querySelector('form').addEventListener('submit', function (e) {
+    const fullName = document.getElementById('full_name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm_password').value;
+    let errors = [];
+
+    if (fullName.length < 3) {
+        errors.push("Full name must be at least 3 characters.");
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        errors.push("Invalid email format.");
+    }
+
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+    if (!passwordRegex.test(password)) {
+        errors.push("Password must be at least 8 characters and include uppercase, lowercase, and a number.");
+    }
+
+    if (password !== confirmPassword) {
+        errors.push("Passwords do not match.");
+    }
+
+    if (errors.length > 0) {
+        e.preventDefault(); // Evita o envio do formulário
+        alert(errors.join("\n"));
+    }
+});
+</script>
