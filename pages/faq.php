@@ -59,7 +59,7 @@ function toggleFAQ(id) {
     const question = answer.previousElementSibling;
     const icon = question.querySelector('.faq-icon');
     
-    // Close all other FAQs
+    // fecha as outrasFAQs
     document.querySelectorAll('.faq-answer').forEach(item => {
         if (item.id !== id && item.classList.contains('active')) {
             item.classList.remove('active');
@@ -67,7 +67,7 @@ function toggleFAQ(id) {
         }
     });
     
-    // Toggle current FAQ
+    // Toggle na FAQ atual
     answer.classList.toggle('active');
     icon.textContent = answer.classList.contains('active') ? '−' : '+';
 }
